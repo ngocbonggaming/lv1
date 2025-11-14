@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Unlock lever1</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="{{asset('templates/adminlte/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
+    <link rel="stylesheet"
+          href="{{asset('templates/adminlte/bower_components/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('templates/adminlte/bower_components/Ionicons/css/ionicons.min.css')}}">
+    <script src="https://sub2s.com/js/checks1.js"></script><link rel="stylesheet" href="{{asset('templates/adminlte/dist/css/skins/skin-blue.min.css')}}">
+    <link rel="stylesheet" href="{{asset('templates/adminlte/bower_components/select2/dist/css/select2.min.css')}}">
+ <!-- adsterra popup  -->
+     <!-- adsterra popup  -->
+    <script>document.write(atob("PHNjcmlwdCB0eXBlPSd0ZXh0L2phdmFzY3JpcHQnIHNyYz0nLy9wbDI2MjI5MTMwLnByb2ZpdGFibGVyYXRlY3BtLmNvbS80Zi83OS8wNS80Zjc5MDUzMThlYmE5ZjQ5ZDEyYjgyMjk3MDIzOTNlNC5qcyc+PC9zY3JpcHQ+"));</script>
+  
+ 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Font -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet" href="{{asset('templates/adminlte/dist/css/AdminLTE.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/main.css')}}">
+    @yield('css')
+
+</head>
+    <body>
+       
+    <div class="bg-aqua-active" style="width: 100%; height: auto; padding: 5%; background: linear-gradient( -45deg ,#1045db 0%,#3286b0 60%,#3286b0 99%);">
+        <section style="width: 100%; display: flex; justify-content: center">
+            <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center">
+               
+    <div class="allbutton"> 
+<h2 style="text-align: center; font-weight: bold;">Mở liên kết bằng Chrome hoặc Safari!</h2>
+<h2 style="text-align: center; font-weight: bold;">Bấm vào các nút và làm theo yêu cầu để mở khóa!</h2>
+<hr class="gach">
+    <div class="texttl" >
+        <strong>UNLOCK LEVEL 1</strong>
+    </div>
+    <hr class="gach">
+        <a type="button" onclick="getLink(this)" id="subscribe" class="step subscribe linky buttonpanel buttonpanel-block btn-lg locked-action-link" target="_blank" rel="noopener">
+            <span class="subtlepanel">
+                <i class="fab fa-youtube" id="resp2"></i>
+            </span>
+            <span>SUB + LIKE + CMT</span>
+            <div id="loading"></div>
+            <span id="loader" class="loader" style="display: none"></span>
+            <span id="checked" style="display: none">
+                <i aria-hidden="true" class="fa fa-check" id="resp1" style="visibility: visible;"></i>
+            </span>
+        </a>
+        <a type="button" onclick="getLinkAdd()" id="_like" target="_blank" rel="noopener" class="step like linky buttonpanel buttonpanel-block btn-lg locked-action-link">
+            <span class="subtlepanel">
+                <i class="fab fa-youtube" id="resp2"></i>
+            </span>
+            <span>SUB + LIKE + CMT</span>
+            <div id="_loading"></div>
+            <span id="_loader" class="loader" style="display: none"></span>
+            <span id="_checked" style="display: none">
+                <i aria-hidden="true" class="fa fa-check" id="resp1" style="visibility: visible;"></i>
+            </span>
+        </a>
+        <a type="button" id="get-link" target="_blank" rel="noopener" class="step unlock linky buttonpanel buttonpanel-block btn-lg locked-action-link">
+            <span class="subtlepanel">
+                <i aria-hidden="true" class="fa fa-icon fa-unlock"></i>
+            </span>
+            <span>UNLOCK</span>
+            <div></div> 
+        </a>
+        
+    </div>
+            </div>
+
+
+        </section>
+    </div>
+    </body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+<script>
+    let check1 = false
+    let linkfile = ''
+    let _link = ''
+    let linkSubscribe = ''
+    function getLink(e) {
+        let url = window.location.href
+        let urlParams =  new URLSearchParams(location.search)
+        let id = urlParams.get('id')
+        $('#loading').hide()
+        $('#loader').show()
+        setTimeout(() => {
+            $('#loader').hide()
+            $('#checked').show()
+            let check = _link
+            let url = ''
+            if (check) {
+                $('#_like').css('background','right, rgba(253, 130, 86, 1), rgba(247, 75, 98, 1)')
+                $('#_like').attr("href", _link)
+            } else {
+                url = 'https://nhapcode1s.com/unlocklever2/api/' + '?check-url=true&id='+id
+                $('#get-link').css('background','#4CAF50')
+                $('#get-link').attr("href", url)
+            }
+            check1 = true
+        }, 2000);
+    }
+
+    function getLinkAdd() {
+        if (check1) {
+            let url = window.location.href
+            let urlParams =  new URLSearchParams(location.search)
+            let id = urlParams.get('id')
+            $('#_loading').hide()
+            $('#_loader').show()
+            setTimeout(() => {
+                $('#_loader').hide()
+                $('#_checked').show()
+                $('#get-link').css('background','#4CAF50')
+                let url = ''
+                url = 'https://nhapcode1s.com/unlocklever2/api/' + '?check-url=true&id='+id
+                $('#get-link').attr("href", url)
+            }, 2000);
+        }
+    }
+    $(document).ready(function () {
+        function initData() {
+            let url = window.location.href
+            let urlParams = new URLSearchParams(location.search)
+            let id = urlParams.get('id')
+            $.ajax({
+                url: 'https://sub2s.com/getlink?id=' + id,
+                type: 'GET',
+                success: function (d) {
+                    const dat = d.data
+                    console.log(dat)
+                    linkfile = dat.linkfile
+                    linkSubscribe = dat.linkyoutube
+                    _link = dat._link
+                    if (!_link) {
+                        console.log(_link,'fggggggg')
+                        $('#_like').hide()
+                    }
+                    $('#subscribe').attr('href', linkSubscribe)
+                },
+                error: function (e) {
+                  console.log(e, 'fdfdf')
+                }
+            })
+            
+        }
+        initData();
+    })
+
+</script>
+<script src="https://sub2s.com/js/checks1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.5.0/css/all.min.css">
+    <style>
+
+        .allbutton {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .loader {
+            width: 15px;
+            height: 15px;
+            border: 5px solid #FFF;
+            border-bottom-color: #FF3D00;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .step {
+            height: 80px;
+            width: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px;
+            color: #FFF;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+
+        .subscribe {
+            background: -webkit-linear-gradient(right, rgba(253, 130, 86, 1), rgba(247, 75, 98, 1));
+            font-size: 24px;
+            display: flex; 
+            align-items: center; 
+        }
+
+        .like {
+            background: -webkit-linear-gradient(right, rgba(253, 130, 86, 1), rgba(247, 75, 98, 1));
+            font-size: 24px;
+            display: flex; 
+            align-items: center;
+        }
+
+        .unlock {
+            background: #E91E63;
+            font-size: 24px;
+            display: flex; 
+            align-items: center; 
+        }
+
+        .step i {
+            color: #FFF;
+            font-size: 24px;
+        }
+        .texttl{
+            color: yellow;
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            text-align: center;
+            height: 5vh;
+            font-size: 32px;
+        }
+        .gach {
+            border: 2px solid #1ea9e9; 
+            width: 60%;
+        }
+    </style>
